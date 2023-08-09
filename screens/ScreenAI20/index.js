@@ -4,13 +4,17 @@ import { View, Text, Image, StyleSheet, SafeAreaView } from 'react-native';
 const ScreenComponent = () => {
   return <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>PRD Draft</Text>
+        <Text style={styles.title}>Architects Feedback</Text>
       </View>
       <View style={styles.content}>
-        <Text style={styles.text}>The BA is actively writing the PRD draft</Text>
         <Image source={{
         uri: 'https://tinyurl.com/42evm3m3'
       }} style={styles.image} />
+        <Text style={styles.feedbackText}>
+          The architects have provided feedback on the PRD and requested updates
+          according to their review. Please make the necessary changes and
+          ensure that the updated PRD aligns with their recommendations.
+        </Text>
       </View>
     </SafeAreaView>;
 };
@@ -21,32 +25,31 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   header: {
-    backgroundColor: '#f9f9f9',
-    paddingVertical: 20,
-    paddingHorizontal: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd'
+    backgroundColor: '#007AFF',
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+    alignItems: 'center'
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#333'
+    color: '#fff'
   },
   content: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 16
-  },
-  text: {
-    fontSize: 18,
-    marginBottom: 20,
-    textAlign: 'center'
+    justifyContent: 'center',
+    paddingHorizontal: 24
   },
   image: {
     width: 200,
     height: 200,
-    borderRadius: 10
+    marginBottom: 16
+  },
+  feedbackText: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#333'
   }
 });
 export default ScreenComponent;
