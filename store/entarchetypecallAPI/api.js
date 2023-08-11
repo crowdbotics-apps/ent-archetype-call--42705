@@ -1,120 +1,106 @@
-import axios from "axios";
+import axios from "axios"
 const entarchetypecallAPI = axios.create({
   baseURL: "https://ent-archetype-call--42705.botics.co",
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json"
-  }
-});
-
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 function api_docs_schema_retrieve(payload) {
   return entarchetypecallAPI.get(`/api-docs/schema/`, {
-    params: {
-      lang: payload.lang
-    }
-  });
+    params: { lang: payload.lang }
+  })
 }
-
 function api_v1_login_create(payload) {
-  return entarchetypecallAPI.post(`/api/v1/login/`, payload.data);
+  return entarchetypecallAPI.post(`/api/v1/login/`, payload.data)
 }
-
 function api_v1_signup_create(payload) {
-  return entarchetypecallAPI.post(`/api/v1/signup/`, payload.data);
+  return entarchetypecallAPI.post(`/api/v1/signup/`, payload.data)
 }
-
 function api_v1_testmodelinfoo_list(payload) {
-  return entarchetypecallAPI.get(`/api/v1/testmodelinfoo/`);
+  return entarchetypecallAPI.get(`/api/v1/testmodelinfoo/`)
 }
-
 function api_v1_testmodelinfoo_create(payload) {
-  return entarchetypecallAPI.post(`/api/v1/testmodelinfoo/`, payload.data);
+  return entarchetypecallAPI.post(`/api/v1/testmodelinfoo/`, payload.data)
 }
-
 function api_v1_testmodelinfoo_retrieve(payload) {
-  return entarchetypecallAPI.get(`/api/v1/testmodelinfoo/${payload.id}/`);
+  return entarchetypecallAPI.get(`/api/v1/testmodelinfoo/${payload.id}/`)
 }
-
 function api_v1_testmodelinfoo_update(payload) {
-  return entarchetypecallAPI.put(`/api/v1/testmodelinfoo/${payload.id}/`, payload.data);
+  return entarchetypecallAPI.put(
+    `/api/v1/testmodelinfoo/${payload.id}/`,
+    payload.data
+  )
 }
-
 function api_v1_testmodelinfoo_partial_update(payload) {
-  return entarchetypecallAPI.patch(`/api/v1/testmodelinfoo/${payload.id}/`, payload.data);
+  return entarchetypecallAPI.patch(
+    `/api/v1/testmodelinfoo/${payload.id}/`,
+    payload.data
+  )
 }
-
 function api_v1_testmodelinfoo_destroy(payload) {
-  return entarchetypecallAPI.delete(`/api/v1/testmodelinfoo/${payload.id}/`);
+  return entarchetypecallAPI.delete(`/api/v1/testmodelinfoo/${payload.id}/`)
 }
-
 function api_v1_testmodelinhome_list(payload) {
-  return entarchetypecallAPI.get(`/api/v1/testmodelinhome/`);
+  return entarchetypecallAPI.get(`/api/v1/testmodelinhome/`)
 }
-
 function api_v1_testmodelinhome_create(payload) {
-  return entarchetypecallAPI.post(`/api/v1/testmodelinhome/`, payload.data);
+  return entarchetypecallAPI.post(`/api/v1/testmodelinhome/`, payload.data)
 }
-
 function api_v1_testmodelinhome_retrieve(payload) {
-  return entarchetypecallAPI.get(`/api/v1/testmodelinhome/${payload.id}/`);
+  return entarchetypecallAPI.get(`/api/v1/testmodelinhome/${payload.id}/`)
 }
-
 function api_v1_testmodelinhome_update(payload) {
-  return entarchetypecallAPI.put(`/api/v1/testmodelinhome/${payload.id}/`, payload.data);
+  return entarchetypecallAPI.put(
+    `/api/v1/testmodelinhome/${payload.id}/`,
+    payload.data
+  )
 }
-
 function api_v1_testmodelinhome_partial_update(payload) {
-  return entarchetypecallAPI.patch(`/api/v1/testmodelinhome/${payload.id}/`, payload.data);
+  return entarchetypecallAPI.patch(
+    `/api/v1/testmodelinhome/${payload.id}/`,
+    payload.data
+  )
 }
-
 function api_v1_testmodelinhome_destroy(payload) {
-  return entarchetypecallAPI.delete(`/api/v1/testmodelinhome/${payload.id}/`);
+  return entarchetypecallAPI.delete(`/api/v1/testmodelinhome/${payload.id}/`)
 }
-
 function rest_auth_login_create(payload) {
-  return entarchetypecallAPI.post(`/rest-auth/login/`, payload.data);
+  return entarchetypecallAPI.post(`/rest-auth/login/`, payload.data)
 }
-
 function rest_auth_logout_retrieve(payload) {
-  return entarchetypecallAPI.get(`/rest-auth/logout/`);
+  return entarchetypecallAPI.get(`/rest-auth/logout/`)
 }
-
 function rest_auth_logout_create(payload) {
-  return entarchetypecallAPI.post(`/rest-auth/logout/`);
+  return entarchetypecallAPI.post(`/rest-auth/logout/`)
 }
-
 function rest_auth_password_change_create(payload) {
-  return entarchetypecallAPI.post(`/rest-auth/password/change/`, payload.data);
+  return entarchetypecallAPI.post(`/rest-auth/password/change/`, payload.data)
 }
-
 function rest_auth_password_reset_create(payload) {
-  return entarchetypecallAPI.post(`/rest-auth/password/reset/`, payload.data);
+  return entarchetypecallAPI.post(`/rest-auth/password/reset/`, payload.data)
 }
-
 function rest_auth_password_reset_confirm_create(payload) {
-  return entarchetypecallAPI.post(`/rest-auth/password/reset/confirm/`, payload.data);
+  return entarchetypecallAPI.post(
+    `/rest-auth/password/reset/confirm/`,
+    payload.data
+  )
 }
-
 function rest_auth_registration_create(payload) {
-  return entarchetypecallAPI.post(`/rest-auth/registration/`, payload.data);
+  return entarchetypecallAPI.post(`/rest-auth/registration/`, payload.data)
 }
-
 function rest_auth_registration_verify_email_create(payload) {
-  return entarchetypecallAPI.post(`/rest-auth/registration/verify-email/`, payload.data);
+  return entarchetypecallAPI.post(
+    `/rest-auth/registration/verify-email/`,
+    payload.data
+  )
 }
-
 function rest_auth_user_retrieve(payload) {
-  return entarchetypecallAPI.get(`/rest-auth/user/`);
+  return entarchetypecallAPI.get(`/rest-auth/user/`)
 }
-
 function rest_auth_user_update(payload) {
-  return entarchetypecallAPI.put(`/rest-auth/user/`, payload.data);
+  return entarchetypecallAPI.put(`/rest-auth/user/`, payload.data)
 }
-
 function rest_auth_user_partial_update(payload) {
-  return entarchetypecallAPI.patch(`/rest-auth/user/`, payload.data);
+  return entarchetypecallAPI.patch(`/rest-auth/user/`, payload.data)
 }
-
 export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
@@ -142,4 +128,4 @@ export const apiService = {
   rest_auth_user_retrieve,
   rest_auth_user_update,
   rest_auth_user_partial_update
-};
+}
