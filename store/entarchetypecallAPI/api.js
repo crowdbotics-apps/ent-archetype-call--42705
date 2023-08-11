@@ -14,6 +14,54 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return entarchetypecallAPI.post(`/api/v1/signup/`, payload.data)
 }
+function api_v1_testmodelinfoo_list(payload) {
+  return entarchetypecallAPI.get(`/api/v1/testmodelinfoo/`)
+}
+function api_v1_testmodelinfoo_create(payload) {
+  return entarchetypecallAPI.post(`/api/v1/testmodelinfoo/`, payload.data)
+}
+function api_v1_testmodelinfoo_retrieve(payload) {
+  return entarchetypecallAPI.get(`/api/v1/testmodelinfoo/${payload.id}/`)
+}
+function api_v1_testmodelinfoo_update(payload) {
+  return entarchetypecallAPI.put(
+    `/api/v1/testmodelinfoo/${payload.id}/`,
+    payload.data
+  )
+}
+function api_v1_testmodelinfoo_partial_update(payload) {
+  return entarchetypecallAPI.patch(
+    `/api/v1/testmodelinfoo/${payload.id}/`,
+    payload.data
+  )
+}
+function api_v1_testmodelinfoo_destroy(payload) {
+  return entarchetypecallAPI.delete(`/api/v1/testmodelinfoo/${payload.id}/`)
+}
+function api_v1_testmodelinhome_list(payload) {
+  return entarchetypecallAPI.get(`/api/v1/testmodelinhome/`)
+}
+function api_v1_testmodelinhome_create(payload) {
+  return entarchetypecallAPI.post(`/api/v1/testmodelinhome/`, payload.data)
+}
+function api_v1_testmodelinhome_retrieve(payload) {
+  return entarchetypecallAPI.get(`/api/v1/testmodelinhome/${payload.id}/`)
+}
+function api_v1_testmodelinhome_update(payload) {
+  return entarchetypecallAPI.put(
+    `/api/v1/testmodelinhome/${payload.id}/`,
+    payload.data
+  )
+}
+function api_v1_testmodelinhome_partial_update(payload) {
+  return entarchetypecallAPI.patch(
+    `/api/v1/testmodelinhome/${payload.id}/`,
+    payload.data
+  )
+}
+function api_v1_testmodelinhome_destroy(payload) {
+  return entarchetypecallAPI.delete(`/api/v1/testmodelinhome/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return entarchetypecallAPI.post(`/rest-auth/login/`, payload.data)
 }
@@ -57,6 +105,18 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_testmodelinfoo_list,
+  api_v1_testmodelinfoo_create,
+  api_v1_testmodelinfoo_retrieve,
+  api_v1_testmodelinfoo_update,
+  api_v1_testmodelinfoo_partial_update,
+  api_v1_testmodelinfoo_destroy,
+  api_v1_testmodelinhome_list,
+  api_v1_testmodelinhome_create,
+  api_v1_testmodelinhome_retrieve,
+  api_v1_testmodelinhome_update,
+  api_v1_testmodelinhome_partial_update,
+  api_v1_testmodelinhome_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
