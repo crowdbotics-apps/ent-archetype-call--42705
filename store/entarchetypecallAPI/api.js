@@ -14,6 +14,27 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return entarchetypecallAPI.post(`/api/v1/signup/`, payload.data)
 }
+function api_v1_test_02_list(payload) {
+  return entarchetypecallAPI.get(`/api/v1/test_02/`)
+}
+function api_v1_test_02_create(payload) {
+  return entarchetypecallAPI.post(`/api/v1/test_02/`, payload.data)
+}
+function api_v1_test_02_retrieve(payload) {
+  return entarchetypecallAPI.get(`/api/v1/test_02/${payload.id}/`)
+}
+function api_v1_test_02_update(payload) {
+  return entarchetypecallAPI.put(`/api/v1/test_02/${payload.id}/`, payload.data)
+}
+function api_v1_test_02_partial_update(payload) {
+  return entarchetypecallAPI.patch(
+    `/api/v1/test_02/${payload.id}/`,
+    payload.data
+  )
+}
+function api_v1_test_02_destroy(payload) {
+  return entarchetypecallAPI.delete(`/api/v1/test_02/${payload.id}/`)
+}
 function api_v1_testmodelinfoo_list(payload) {
   return entarchetypecallAPI.get(`/api/v1/testmodelinfoo/`)
 }
@@ -105,6 +126,12 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_test_02_list,
+  api_v1_test_02_create,
+  api_v1_test_02_retrieve,
+  api_v1_test_02_update,
+  api_v1_test_02_partial_update,
+  api_v1_test_02_destroy,
   api_v1_testmodelinfoo_list,
   api_v1_testmodelinfoo_create,
   api_v1_testmodelinfoo_retrieve,
